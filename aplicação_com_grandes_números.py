@@ -24,7 +24,6 @@ for i in range (n):
 """#Plotando amostras"""
 
 plt.rcParams['figure.figsize'] = (20,10)
-plt.tick_params(labelsize=30)
 
 TAMar = np.array(range(n)) 
 
@@ -44,13 +43,14 @@ plt.plot()
 soma = 0;
 media = []
 
+print(x[0])
+print(x[1])
 for i in range(n):
   soma = x[i] + soma;
   if i == 0:
     media.append(soma)
-    continue
-
-  media.append(soma/(i))
+  else:
+    media.append(soma/(i+1))
 
 media
 
