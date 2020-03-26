@@ -46,7 +46,11 @@ media = []
 
 for i in range(n):
   soma = x[i] + soma;
-  media.append(soma/(i+1))
+  if i == 0:
+    media.append(soma)
+    continue
+
+  media.append(soma/(i))
 
 media
 
